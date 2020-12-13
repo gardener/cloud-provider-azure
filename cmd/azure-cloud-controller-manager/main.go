@@ -23,13 +23,14 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 	cloudprovider "k8s.io/cloud-provider"
 	"k8s.io/cloud-provider/app"
-	"k8s.io/cloud-provider/options" // add the kubernetes feature gates
+	"k8s.io/cloud-provider/options"
 	cliflag "k8s.io/component-base/cli/flag"
 	"k8s.io/component-base/cli/globalflag"
 	"k8s.io/component-base/logs"
 	_ "k8s.io/component-base/metrics/prometheus/clientgo" // for client metric registration
 	_ "k8s.io/component-base/metrics/prometheus/version"  // for version metric registration
 	"k8s.io/klog"
+	_ "k8s.io/kubernetes/pkg/features" // add the kubernetes feature gates
 	"k8s.io/legacy-cloud-providers/azure"
 )
 
